@@ -17,8 +17,8 @@ temp=$(tempfile).png
 # Take a screenshot in PNG format
 scrot "$temp"
 
-# Lock the screen and display the PNG file as a background image
-i3lock -i "$temp"
+# Lock the screen and display the PNG file as a background image. Disable the unlock indicator and keep the mouse pointer
+i3lock -e -i "$temp" -p default -u
 
 # Deletes the temporary image file
 rm "$temp"
